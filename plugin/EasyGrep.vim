@@ -2817,7 +2817,7 @@ function! s:GetGrepCommandLine(pattern, add, wholeword, count, escapeArgs, filte
     let filesToGrep = join(fileTargetList, ' ')
 
     let win = g:EasyGrepWindow != 0 ? "l" : ""
-    let grepCommand = a:count.win.com.a:add.bang." ".opts.pattern.aux_pattern_postfix." ".filesToGrep
+    let grepCommand = a:count.win.com.a:add.bang." ".opts.pattern.aux_pattern_postfix." ** ".filesToGrep
 
     return grepCommand
 endfunction
